@@ -36,11 +36,17 @@ export function PathName({ lastPathname }: any) {
     );
 }
 
-export function ManipulateLastPathname() {
+export function ManipulateLastPathname(props:any) {
     useEffect(() => {
         const lastPathnameElement = document.getElementById("lastPathname");
         if (lastPathnameElement) {
             lastPathnameElement.style.opacity = "50%";
+        }
+        if(props.strMeal != undefined) {
+            const lastPathnameElement = document.getElementById("lastPathname");
+            if (lastPathnameElement) {
+                lastPathnameElement.innerText = props.strMeal;
+            }
         }
     }, []);
 

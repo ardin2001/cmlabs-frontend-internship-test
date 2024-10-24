@@ -61,7 +61,7 @@ export default async function MyComponent({ params }: any) {
                             allowFullScreen
                         ></iframe>
                     </div>
-                    <ManipulateLastPathname />
+                    <ManipulateLastPathname strMeal={data[0].strMeal} />
                 </>
             )}
         </main>
